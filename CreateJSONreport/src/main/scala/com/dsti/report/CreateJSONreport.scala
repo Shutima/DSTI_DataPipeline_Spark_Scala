@@ -191,7 +191,7 @@ object CreateJSONreport {
     val reportAsIp = theDates.map(date => (date, reportByIpComplete(date)))
 
     //Convert this to dataframe to create new json report by IP
-    //reportAsIp.toDF("date", "uriReport2").coalesce(1).write.mode("Overwrite").json("myjsonreport_reportByIp")
+    reportAsIp.toDF("date", "uriReport2").coalesce(1).write.mode("Overwrite").json("myjsonreport_reportByIp")
 
     //compute the list of number of connections from 10  days before to 10 days after
     //generate at outputPath a report in json format with one json report line per date

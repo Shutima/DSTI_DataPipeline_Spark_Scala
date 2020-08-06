@@ -1,0 +1,5 @@
+*.class
+*.log
+CreateJSONreport/target/*
+CreateJSONreport/project/target/*
+CreateJSONreport/project/project/target/*
